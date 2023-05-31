@@ -29,5 +29,21 @@ Usage of sfd:
 ## 下载单个文件
 ```bash
 # sfd -f https://cos-anonymous-cdn.bw-yx.com/test.pdf -o ./pdf
+total download files: 1
+test.pdf [=============>----------------------------------------------------------------]  19 %
+```
 
+## 下载多个文件
+```bash
+# cat file-list.txt
+https://cos-anonymous-cdn.bw-yx.com/test.pdf
+https://cos-anonymous-cdn.bw-yx.com/videos/painting/4-36f152a0113d658280c28b3e634d3c82/ab1bd410bef711ec9bf71b9cd156e33a.mp4
+https://cos-anonymous-cdn.bw-yx.com/videos/painting/4-36f152a0113d658280c28b3e634d3c82/25f25c90bef811ecb66d0b0a269545fe.mp4
+```
+```bash
+# sfd -l file-list.txt -o ./pdf
+total download files: 3
+test.pdf [==================>-----------------------------------------------------------]  24 %
+25f25c90bef811ecb66d0b0a269545fe.mp4 [=========================================================>--------------------]  74 %
+ab1bd410bef711ec9bf71b9cd156e33a.mp4 [>-----------------------------------------------------------------------------]   2 %
 ```
