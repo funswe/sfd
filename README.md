@@ -7,7 +7,7 @@
 
 ## 安装
 ```bash
-# go install github.com/funswe/sfd
+# go install github.com/funswe/sfd@v1.0.0
 ```
 执行完之后会在GOPATH路径下的bin目录里看到sfd可执行程序
 
