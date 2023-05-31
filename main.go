@@ -51,7 +51,7 @@ func handleFlag() (*Parameters, error) {
 	if len(*outPath) > 0 {
 		absOutPath, _ := filepath.Abs(*outPath)
 		if !isFileExist(absOutPath) {
-			err := os.MkdirAll(absOutPath, 0777)
+			err := os.MkdirAll(absOutPath, 777)
 			if err != nil {
 				return nil, errors.New(fmt.Sprintf("create output path dir err: %s", err.Error()))
 			}
